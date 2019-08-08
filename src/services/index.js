@@ -1,3 +1,3 @@
-import SwapiServise from './swapi-service'
+import SwapiService from './swapi-service'
 
-export default SwapiServise
+export default SwapiService

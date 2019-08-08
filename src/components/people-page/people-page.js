@@ -3,12 +3,12 @@ import React, {Component} from 'react';
 import ItemList from "../item-list";
 import PersonDetails from '../person-details'
 import ErrorIndicator from "../error-indicator";
-import SwapiServise from "../../services";
+import SwapiService from "../../services";
 import './people-page.css';
 
 export default class PeoplePage extends Component {
 
-    swapiService = new SwapiServise();
+    swapiService = new SwapiService();
 
     state = {
         selectedPerson: 1,

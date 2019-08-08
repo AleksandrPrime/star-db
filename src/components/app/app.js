@@ -6,14 +6,14 @@ import ErrorButton from '../error-button';
 import ErrorIndicator from '../error-indicator';
 import PeoplePage from '../people-page'
 
-import SwapiServise from "../../services";
+import SwapiService from "../../services";
 import './app.css';
-import ItemList from "../people-page/people-page";
+import ItemList from "../item-list";
 import PersonDetails from '../person-details'
 
 export default class App extends Component {
 
-    swapiService = new SwapiServise();
+    swapiService = new SwapiService();
 
     state = {
         showRandomPlanet: true,

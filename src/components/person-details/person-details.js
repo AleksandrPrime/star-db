@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 import './person-details.css';
-import SwapiServise from "../../services";
+import SwapiService from "../../services";
 import ErrorButton from '../error-button'
 import Spinner from "../spinner";
 
 export default class PersonDetails extends Component {
 
-    swapiService = new SwapiServise();
+    swapiService = new SwapiService();
 
     state = {
         person: null
