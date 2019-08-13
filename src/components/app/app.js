@@ -9,7 +9,7 @@ import PeoplePage from '../people-page'
 import SwapiService from "../../services";
 import './app.css';
 import ItemList from "../item-list";
-import PersonDetails from '../person-details'
+import ItemDetails from '../person-details'
 
 export default class App extends Component {
 
