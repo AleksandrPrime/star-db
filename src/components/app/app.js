@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Header from '../header';
 import RandomPlanet from '../random-planet';
+import {SwapiServiceProvider} from "../swapi-service-context";
 import ErrorButton from '../error-button';
 import ErrorIndicator from '../error-indicator';
 import PeoplePage from '../people-page';
@@ -81,26 +82,24 @@ export default class App extends Component {
 
         return (
             <ErrorBoundry>
-                <div className="stardb-app">
-                    <Header/>
+                <SwapiServiceProvider value={this.swapiService}>
+                    <div className="stardb-app">
+                        <Header/>
 
-                    <PersonDetails itemId={11}/>
+                        <PersonDetails itemId={11}/>
 
-                    <PlanetDetails itemId={5}/>
+                        <PlanetDetails itemId={5}/>
 
-                    <StarshipDetails itemId={5}/>
+                        <StarshipDetails itemId={5}/>
 
-                    <PlanetList>
-                        {({name}) => <span>{name}</span>}
-                    </PlanetList>
-                    <PersonList>
-                        {({name}) => <span>{name}</span>}
-                    </PersonList>
-                    <StarshipList>
-                        {({name}) => <span>{name}</span>}
-                    </StarshipList>
+                        <PlanetList/>
 
-                </div>
+                        <PersonList/>
+
+                        <StarshipList/>
+
+                    </div>
+                </SwapiServiceProvider>
             </ErrorBoundry>
         );
     }
