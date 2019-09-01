@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './item-details.css';
-import SwapiService from "../../services";
+import {SwapiService} from "../../services/swapi-service";
 import ErrorButton from '../error-button'
 import Spinner from "../spinner";
 
