@@ -11,14 +11,12 @@ import { DummySwapiService } from '../../services/dummy-swapi-service';
 import './app.css';
 
 import ErrorBoundry from "../error-boundry";
-import Row from '../row'
 import { PeoplePage, PlanetsPage, SarshipPage } from '../pages'
 
 
 export default class App extends Component {
 
     state = {
-        showRandomPlanet: true,
         swapiService: new SwapiService(),
         hasError: false
     };
@@ -46,9 +44,6 @@ export default class App extends Component {
             return <ErrorIndicator />
         }
 
-        const planet = this.state.showRandomPlanet ?
-            <RandomPlanet/> :
-            null;
 
         return (
             <ErrorBoundry>
@@ -56,7 +51,7 @@ export default class App extends Component {
                     <div className="stardb-app">
                         <Header onServiceChange={this.onServiceChange}/>
 
-                        { planet }
+                        <RandomPlanet/>
 
                         <PeoplePage />
 
