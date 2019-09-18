@@ -11,7 +11,7 @@ import { DummySwapiService } from '../../services/dummy-swapi-service';
 import './app.css';
 
 import ErrorBoundry from "../error-boundry";
-import { PeoplePage, PlanetsPage, SarshipPage } from '../pages'
+import { PeoplePage, PlanetsPage, StarshipPage } from '../pages'
 
 
 export default class App extends Component {
@@ -51,13 +51,13 @@ export default class App extends Component {
                     <div className="stardb-app">
                         <Header onServiceChange={this.onServiceChange}/>
 
-                        <RandomPlanet/>
+                        <RandomPlanet />
 
                         <PeoplePage />
 
                         <PlanetsPage />
 
-                        <SarshipPage />
+                        <StarshipPage />
                     </div>
                 </SwapiServiceProvider>
             </ErrorBoundry>
