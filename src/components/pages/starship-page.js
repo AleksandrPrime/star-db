@@ -6,7 +6,7 @@ const StarshipPage = ({ history })  => {
         return (
             <StarshipList
             onItemSelected={(itemId)=> {
-                history.push(`/starship/${itemId}`)
+                history.push(itemId)
             }}/>
         );
 };
