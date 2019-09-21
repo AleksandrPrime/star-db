@@ -2,7 +2,7 @@
   "name": "star-db",
   "version": "0.1.0",
   "private": true,
-  "homepages": "https://aleksandrprime.github.io/star-db",
+  "homepages": "https://aleksandrprime.github.io/star-db/build",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
