@@ -22,7 +22,7 @@ class SwapiService {
     };
 
     getPerson = async (id) => {
-        const person = await this.getResource(`/people/${id}`);
+        const person = await this.getResource(`/people/${id}/`);
         return this._transformPerson(person)
     };
     getAllPlanets = async () => {
@@ -30,7 +30,7 @@ class SwapiService {
         return res.results.map(this._transformPlanet)
     };
     getPlanet = async (id) => {
-        const planet = await this.getResource(`/planets/${id}`);
+        const planet = await this.getResource(`/planets/${id}/`);
         return this._transformPlanet(planet)
     };
     getAllStarships = async () => {
@@ -38,7 +38,7 @@ class SwapiService {
         return res.results.map(this._transformStarship)
     };
     getStarship = async (id) => {
-        const starship = await this.getResource(`/starships/${id}`);
+        const starship = await this.getResource(`/starships/${id}/`);
         return this._transformStarship(starship)
     };
     getPersonImage = ({id}) => {
